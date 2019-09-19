@@ -1,0 +1,137 @@
+#navbar{
+    width: 85%;
+    font-size: 20px;
+    font-family: Tajawal;
+    margin-left: 7%;
+    position: fixed;
+    top: 10px;
+    background-color: rgb(0, 13, 51); 
+}
+
+#navbar ul{
+    list-style: none;
+    float: left;
+}
+
+#navbar ul li{
+    display: inline;
+    margin: 5px;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar ul li~li a:hover{
+    border-bottom: solid orange 2px; 
+    text-shadow: 0px 0px 1px;
+}
+
+#logo{
+    font-family: Changa;
+    font-size: 30px;
+}
+
+#qmark{
+    transform: rotate(150deg);
+    vertical-align: middle;
+    position: relative; 
+    right: 10px;
+    bottom: 2px;
+}
+
+#navbar form{
+    display: inline;
+    color:  rgb(0, 13, 51);
+    vertical-align: text-bottom;
+    position: relative;
+    left: 30%;
+}
+
+#navbar form input{
+    width: 300px;
+    font-family: "Tajawal";
+    font-size: 20px;
+    border-width: 1px;
+    border-color: #fff;
+    border-radius: 15px;
+    text-align: left;
+    padding-left: 10px; 
+}
+
+#navbar form input:focus{
+    outline: 0px;
+    border:none;
+    box-shadow: 0px 0px 4px #fff;
+}
+
+#navbar form button{
+    background-color: inherit;
+    border-radius: 15px;
+    /*border-width: 1px;
+    border-color: rgba(0, 13, 51, 0.6); */
+    border: none;
+    position: relative;
+    right: 40px;
+    top: 2px;
+    cursor: pointer;
+}
+
+/* Top today */
+
+#top-rated{
+    margin: auto;
+    margin-top: 10%;
+    width: 85%;
+    height: 500px;
+    border-style: solid;
+    border-color: rgba(0, 13, 51, 0.6);
+    border-width: 1px;
+    text-align: left; 
+    color: rgb(0, 13, 51);
+}
+
+#top-rated div{
+    height: 480px;
+    /* border-style: solid;
+    border-color: rgba(0, 13, 51, 0.6);
+    border-width: 1px; */
+    float: left;
+    margin: 8px;
+}
+
+#tr-specs{
+    width:60%;
+    font-family: Tajawal;
+    overflow-y: scroll;
+}
+
+#tr-specs > *{
+    margin-left: 30px;
+}
+
+#tr-specs h1{
+    width:fit-content;
+    padding-bottom: 0px;
+    border-bottom: solid 2px orange; 
+    font-family: Changa;
+}
+
+#tr-image{
+    width: 36%;
+    text-align: center;
+}
+
+#tr-image img{
+    size: inherit;
+    position: relative;
+    bottom: 120px;
+    z-index: -1;
+}
+
+#tr-image img[alt]{
+    font-family: Tajawal;
+    font-size: 50px;
+    margin-top: 30%;
+}
