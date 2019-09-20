@@ -1,9 +1,9 @@
 #navbar{
-    width: 85%;
+    width: 95%;
     font-size: 20px;
     font-family: Tajawal;
-    margin-left: 7%;
     position: fixed;
+    margin-left: 2%;
     top: 10px;
     background-color: rgb(0, 13, 51); 
 }
@@ -78,60 +78,61 @@
     cursor: pointer;
 }
 
-/* Top today */
+/* slideshow */
 
-#top-rated{
+#slideshow{
     margin: auto;
     margin-top: 10%;
-    width: 85%;
+    width: 95%;
     height: 500px;
-    border-style: solid;
-    border-color: rgba(0, 13, 51, 0.6);
-    border-width: 1px;
-    text-align: left; 
-    color: rgb(0, 13, 51);
+    border: 1px solid black;
 }
 
-#top-rated div{
-    height: 480px;
-    /* border-style: solid;
-    border-color: rgba(0, 13, 51, 0.6);
-    border-width: 1px; */
+#img1{
+    width: 100%;
+    height: 100%;
     float: left;
-    margin: 8px;
+    background-color: orange;
 }
 
-#tr-specs{
-    width:60%;
+#img2{
+    width: 0%;
+    height: 100%;
+    background-color: orangered;
+    float: right;
+}
+
+/* Contact us */
+
+#contact{
+    margin: auto;
+    margin-top: 2%;
+    width: 95%;
+    background-color: rgb(0, 13, 51);
     font-family: Tajawal;
-    overflow-y: scroll;
 }
 
-#tr-specs > *{
-    margin-left: 30px;
-}
-
-#tr-specs h1{
-    width:fit-content;
-    padding-bottom: 0px;
-    border-bottom: solid 2px orange; 
+#contact h3{
     font-family: Changa;
+    color: orange;
+    font-weight: lighter;
+    margin-left: 3%;
+    margin-bottom: 0px;
 }
 
-#tr-image{
-    width: 36%;
-    text-align: center;
+#contact ul{
+    list-style: none;
 }
 
-#tr-image img{
-    size: inherit;
-    position: relative;
-    bottom: 120px;
-    z-index: -1;
+#contact ul li span{
+    vertical-align: middle;
 }
 
-#tr-image img[alt]{
-    font-family: Tajawal;
-    font-size: 50px;
-    margin-top: 30%;
+#contact ul li{
+    margin-top: 10px;
+}
+
+#contact ul li a{
+    text-decoration: none;
+    color: #fff;
 }
