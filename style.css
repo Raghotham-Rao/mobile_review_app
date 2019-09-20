@@ -43,7 +43,7 @@
     vertical-align: middle;
     position: relative; 
     right: 10px;
-    bottom: 2px;
+    bottom: 4px;
 }
 
 #navbar form{
@@ -51,7 +51,7 @@
     color:  rgb(0, 13, 51);
     vertical-align: text-bottom;
     position: relative;
-    left: 30%;
+    left: 40%;
 }
 
 #navbar form input{
@@ -110,16 +110,6 @@
 /* Contact us */
 
 /* About */
-#aboutus{
-    margin: 10px 0 0 3%;
-    width: 20%;
-    float: left;
-}
-
-#aboutus > *{
-    color: #fff;
-}
-
 #contact-section{
     margin: auto;
     margin-top: 2%;
@@ -129,34 +119,39 @@
     font-family: Tajawal;
 }
 
-#contact{
+#contact-section > *{
+    margin: 2.5% 0 0 3%;
     width: 20%;
     float: left;
-    margin: 2.5% 0 0 3%;
+    color: #fff;
 }
 
-#contact h3{
+#contact-section > * h3{
     width: fit-content;
     font-family: Changa;
     color: #fff;
     font-weight: lighter;
     border-bottom: 1px solid orange;
-    margin-left: 40px;
+    text-align: left;
 }
 
-#contact ul{
-    list-style: none;
-}
-
-#contact ul li span{
+#contact-section > * span{
     vertical-align: middle;
 }
 
-#contact ul li{
+#social h3{
+    margin-left: 40px;
+}
+
+#social ul{
+    list-style: none;
+}
+
+#social ul li{
     margin-top: 10px;
 }
 
-#contact ul li a{
+#social ul li a{
     text-decoration: none;
     color: #fff;
 }
