@@ -2,8 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import urllib
+import json
 
-driver = webdriver.Chrome('/home/raghu/Desktop/chromedriver')
+driver = webdriver.Chrome('/home/raghu/chromedriver')
 
 driver.get('https://www.flipkart.com')
 sleep(4)
@@ -14,7 +15,7 @@ sleep(2)
 srch_box = driver.find_element_by_xpath("//input[contains(@class, 'LM6RPg') and contains(@placeholder, 'Search for products, brands and more')]")
 srch_box.send_keys('mobiles')
 srch_box.send_keys(Keys.ENTER)
-sleep(2)
+sleep(3)
 
 driver.find_element_by_xpath("//div[contains(text(), 'Popularity')]").click()
 sleep(2)
@@ -22,29 +23,61 @@ sleep(2)
 driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '4 GB')]").click()
 sleep(2)
 
-# driver.find_element_by_xpath("//div[contains(@class, '_2yccxO') and contains(@class, 'D0YrLF')]").click()
-# driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '32 - 63.9 GB')]").click()
-# sleep(2)
-# driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '64 - 127.9 GB')]").click()
-# sleep(2)
-
-# driver.find_element_by_xpath("//div[contains(@class, '_2yccxO') and contains(@class, 'D0YrLF') and contains(text(), 'Battery Capacity')]").click()
-# driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '4000 - 4999 mAh')]").click()
-# sleep(2)
-
-max_rating = 0
-elem = None
-phones = driver.find_elements_by_css_selector("._38sUEc span:nth-child(1)")
+phones = driver.find_elements_by_xpath("//div[contains(@class, '_3wU53n')]")
+names = []
 for i in phones:
-	rating = int(''.join(i.text.split()[0].split(',')))
-	if rating > max_rating:
-		max_rating = rating
-		elem = i
-print(max_rating)
+	name = i.text.split('(')[0][:-1]
+	if name not in names:
+		names.append(name);
+
+driver.get("https://www.gsmarena.com")
 sleep(2)
 
-elem.click()
+details = dict()
+subfeature_count = {}
+for i in names:
+	gsm_srchbox = driver.find_element_by_xpath("//input[contains(@id, 'topsearch-text')]")
+	gsm_srchbox.send_keys(i)
+	gsm_srchbox.send_keys(Keys.ENTER)
+	sleep(2)
+	# Getting the features
+	driver.find_element_by_xpath("//div[contains(@id, 'review-body')]//img").click()
+	sleep(2)
+	features = driver.find_elements_by_xpath("//div[contains(@id, 'specs-list')]//table")
+	fdict = {}
+	for j in features:
+		feature = j.find_element_by_css_selector("th")
+		subfeatures = j.find_elements_by_css_selector(".ttl,.nfo")
+		itr, key, val = 1, 0, 0
+		sfdict = {}
+		for k in subfeatures:
+			if itr % 2 == 1:
+				key = k.text
+				key = feature.text + '_others' if key == ' ' else key
+				if key not in subfeature_count:
+					subfeature_count[key] = 0
+				subfeature_count[key] += 1
+			else:
+				val = k.text
+				sfdict[key] = val
+			itr += 1
+		fdict[feature.text] = sfdict
+	fdict["images"] = []
+	# Getting the images' href
+	driver.find_element_by_css_selector("i.head-icon.icon-pictures").click()
+	sleep(2)
+	pics_list = driver.find_elements_by_css_selector("#pictures-list>*")
+	for pic in pics_list:
+		if "official images" in pic.text:
+			continue
+		if "our photos" in pic.text:
+			break
+		fdict["images"].append(pic.get_attribute("src"));
+	details[i] = fdict
+	sleep(2)
+	# break
 
-sleep(3)
+# print(details)
 
-driver.find_element_by_css_selector("._3BTv9X._3iN4zu img[alt='Redmi Note 7 Pro (Space Black, 64 GB)']").click()
+with open('phone_details.json', 'w') as f:
+	json.dump(details, f)

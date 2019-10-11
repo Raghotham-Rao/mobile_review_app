@@ -63,6 +63,7 @@
     border-radius: 15px;
     text-align: left;
     padding-left: 10px; 
+    padding-top: 8px;
 }
 
 #navbar form input:focus{
@@ -79,7 +80,7 @@
     border: none;
     position: relative;
     right: 40px;
-    top: 2px;
+    top: 5px;
     cursor: pointer;
 }
 
@@ -87,9 +88,9 @@
 
 #slideshow{
     margin: auto;
-    margin-top: 10%;
+    margin-top: 8%;
     width: 95%;
-    height: 500px;
+    height: 600px;
     border: 1px solid black;
 }
 
