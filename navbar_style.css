@@ -1,0 +1,85 @@
+#navbar{
+    width: 95%;
+    font-size: 20px;
+    font-family: Tajawal;
+    position: fixed;
+    margin-left: 2%;
+    top: 10px;
+    background-color: rgb(0, 13, 51); 
+}
+
+#navbar ul{
+    list-style: none;
+    float: left;
+}
+
+#navbar ul li{
+    display: inline;
+    margin: 5px;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar ul li~li a:hover{
+    border-bottom: solid orange 2px; 
+    text-shadow: 0px 0px 1px;
+}
+
+.logo{
+    font-family: Changa;
+    font-size: 30px;
+}
+
+.logo a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.qmark{
+    transform: rotate(150deg);
+    vertical-align: middle;
+    position: relative; 
+    right: 10px;
+    bottom: 4px;
+}
+
+#navbar form{
+    display: inline;
+    color:  rgb(0, 13, 51);
+    vertical-align: text-bottom;
+    position: relative;
+    left: 40%;
+}
+
+#navbar form input{
+    width: 300px;
+    font-family: "Tajawal";
+    font-size: 20px;
+    border-width: 1px;
+    border-color: #fff;
+    border-radius: 15px;
+    text-align: left;
+    padding-left: 10px; 
+    padding-top: 8px;
+}
+
+#navbar form input:focus{
+    outline: 0px;
+    border:none;
+    box-shadow: 0px 0px 4px #fff;
+}
+
+#navbar form button{
+    background-color: inherit;
+    border-radius: 15px;
+    /*border-width: 1px;
+    border-color: rgba(0, 13, 51, 0.6); */
+    border: none;
+    position: relative;
+    right: 40px;
+    top: 5px;
+    cursor: pointer;
+}

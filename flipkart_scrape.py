@@ -23,12 +23,27 @@ sleep(2)
 driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '4 GB')]").click()
 sleep(2)
 
-phones = driver.find_elements_by_xpath("//div[contains(@class, '_3wU53n')]")
+pages = 2
 names = []
-for i in phones:
-	name = i.text.split('(')[0][:-1]
-	if name not in names:
-		names.append(name);
+rat_rev_hlts = {}
+while pages < 5:
+	phones = driver.find_elements_by_xpath("//div[contains(@class, '_3O0U0u')]")
+	for i in phones:
+		name = i.find_element_by_css_selector("div._3wU53n").text.split('(')[0][:-1];
+		if name not in rat_rev_hlts:
+			ovr = i.find_element_by_css_selector("div.hGSR34").text;
+			ratings = i.find_element_by_css_selector("span._38sUEc span:nth-child(1)").text;
+			hlts_elems = i.find_elements_by_css_selector("li.tVe95H")
+			hlts = []
+			for i in hlts_elems:
+				hlts.append(i.text)
+			rat_rev_hlts[name] = {"Overall": ovr, "Ratings": ratings, "Highlights": hlts}
+	driver.find_element_by_xpath("//div[contains(@class, '_2zg3yZ')]//a[contains(@class, '_2Xp0TH') and contains(text(), '"+str(pages)+"')]").click()
+	pages += 1
+	sleep(2)
+
+names = rat_rev_hlts.keys();
+print(len(names))
 
 driver.get("https://www.gsmarena.com")
 sleep(2)
@@ -73,11 +88,11 @@ for i in names:
 		if "our photos" in pic.text:
 			break
 		fdict["images"].append(pic.get_attribute("src"));
+	for key, val in rat_rev_hlts[i].items():
+		fdict[key] = val
 	details[i] = fdict
 	sleep(2)
-	# break
+#print(details)
 
-# print(details)
-
-with open('phone_details.json', 'w') as f:
-	json.dump(details, f)
+with open("phone_details.json", 'w') as f:
+	json.dump(details, f);
