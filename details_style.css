@@ -1,5 +1,5 @@
 #rest_of{
-	border: 1px solid rgba(0, 0, 0, 0.6);
+	/* border: 1px solid rgba(0, 0, 0, 0.6); */
 	width: 95%;
 	height: 620px;
 	margin: auto;
@@ -8,16 +8,16 @@
 }
 
 #rest_of>*{
-	border: 1px solid rgba(0, 0, 0, 0.6);
+	/* border: 1px solid rgba(0, 0, 0, 0.6); */
 	margin: 10px;
 	float: left;
-	width: 40%;
 }
 
 #images{
 	width: 40%;
 	height: 600px;
 	margin-left: 50px;
+	border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 #images img{
@@ -32,11 +32,9 @@
 	vertical-align: middle;
 	border-bottom: 3px solid orange;
 	margin-top: 30px;
-	width: fit-content;
 }
 
 #rat-rev{
-	width: 40%;
 	font-size: 15px;
 	margin-top: 0px;
 	color: rgba(0, 0, 0, 0.6);
@@ -81,5 +79,35 @@
 
 #release{
 	color: rgba(0, 0, 0, 0.6);
-	margin-top: 20px;
+	width: 50%;
+	margin-top: 0px;
+}
+
+#details{
+	width: inherit;
+}
+
+#details table{
+	text-align: left;
+	padding: 5%;
+	vertical-align: baseline;
+} 
+
+th{
+	width: 20%;
+	padding-bottom: 10px;
+}
+
+#details table th span{
+	font-size: 30px;
+	border-bottom: 2px solid orange;
+}
+
+#details table td{
+	padding: 5px;
+	height: 30px;
+}
+
+.sub-feat:nth-child(even){
+	background-color: rgba(0, 0, 0, 0.1);
 }

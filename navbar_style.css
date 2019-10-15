@@ -83,3 +83,52 @@
     top: 5px;
     cursor: pointer;
 }
+
+
+/* Contact Section */
+
+#contact-section{
+    margin: auto;
+    margin-top: 2%;
+    width: 95%;
+    height: 400px;;
+    background-color: rgb(0, 13, 51);
+    font-family: Tajawal;
+}
+
+#contact-section > *{
+    margin: 2.5% 0 0 3%;
+    width: 20%;
+    float: left;
+    color: #fff;
+}
+
+#contact-section > * h3{
+    width: fit-content;
+    font-family: Changa;
+    color: #fff;
+    font-weight: lighter;
+    border-bottom: 1px solid orange;
+    text-align: left;
+}
+
+#contact-section > * span{
+    vertical-align: middle;
+}
+
+#social h3{
+    margin-left: 40px;
+}
+
+#social ul{
+    list-style: none;
+}
+
+#social ul li{
+    margin-top: 10px;
+}
+
+#social ul li a{
+    text-decoration: none;
+    color: #fff;
+}

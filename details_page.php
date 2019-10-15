@@ -2,7 +2,7 @@
 <html>
     <head>
     	<link rel="stylesheet" href="navbar_style.css"/>
-		<link rel="stylesheet" href="details_style.css">
+		<link rel="stylesheet" href="details_style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Caveat|Changa|Poiret+One|Righteous|Tajawal&display=swap" rel="stylesheet">
 		<meta charset="UTF-8">
     </head>
@@ -65,7 +65,29 @@
 			<div id="release">
 				<span> Available From <?php echo $data[$phone]["LAUNCH"]["Announced"] ?> </span>
 			</div>
+
+			<div id="details">
+				<table>
+					<?php
+						foreach($data[$phone] as $feature=>$subfeature){
+							if($feature == "images")
+								break;
+							echo "<tr><th><span>".$feature."</span></th></tr>";
+							foreach($subfeature as $key=>$value){
+								echo "<tr class=\"sub-feat\"><td>".$key."</td>";
+								echo "<td>".$value."</td></tr>";
+							}
+							if($feature != "NETWORK")
+								echo "<tr style=\"backgroound-color: #fff\"><td></td></tr>";
+						}
+					?>
+				</table>
+			</div>
 		
+			<div id="contact-section" style="width: 100%;">
+
+			</div>
+
 		</div>
 	
 		<script>
