@@ -1,31 +1,35 @@
 #navbar{
-    width: 95%;
-    font-size: 20px;
+    width: 80%;
+    font-size: 18px;
     font-family: Tajawal;
-    position: fixed;
-    margin-left: 2%;
-    top: 10px;
-    background-color: rgb(0, 13, 51); 
+    margin: auto;
+    background-color: black; 
+    position: sticky;
+    top: 0px;
 }
 
 #navbar ul{
     list-style: none;
-    float: left;
+    display: inline;
 }
 
 #navbar ul li{
     display: inline;
-    margin: 5px;
+    margin: 10px;
 }
 
 #navbar ul li a{
     text-decoration: none;
-    color: #fff;
+    color: olive;
+    transition: border-bottom-color 0.5s, color 0.5s;
 }
 
 #navbar ul li~li a:hover{
-    border-bottom: solid orange 2px; 
-    text-shadow: 0px 0px 1px;
+    border-bottom-style: solid;
+    border-bottom-color: olive;
+    border-bottom-width: 1px; 
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.8);
+    color: #fff;
 }
 
 .logo{
@@ -48,22 +52,19 @@
 
 #navbar form{
     display: inline;
-    color:  rgb(0, 13, 51);
-    vertical-align: text-bottom;
-    position: relative;
-    left: 40%;
 }
 
 #navbar form input{
-    width: 300px;
+    width: 20%;
     font-family: "Tajawal";
-    font-size: 20px;
+    font-size: 15px;
     border-width: 1px;
     border-color: #fff;
     border-radius: 15px;
     text-align: left;
     padding-left: 10px; 
     padding-top: 8px;
+    margin-left: 20%;
 }
 
 #navbar form input:focus{
@@ -90,9 +91,9 @@
 #contact-section{
     margin: auto;
     margin-top: 2%;
-    width: 95%;
+    width: 80%;
     height: 400px;;
-    background-color: rgb(0, 13, 51);
+    background-color: black;
     font-family: Tajawal;
 }
 
@@ -108,7 +109,7 @@
     font-family: Changa;
     color: #fff;
     font-weight: lighter;
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid olive;
     text-align: left;
 }
 
@@ -131,4 +132,8 @@
 #social ul li a{
     text-decoration: none;
     color: #fff;
+}
+
+g{
+    fill: olive;
 }

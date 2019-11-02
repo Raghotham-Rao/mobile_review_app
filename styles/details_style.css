@@ -1,0 +1,90 @@
+#rest_of{
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+	font-family: Tajawal;
+}
+
+#images{
+	width: 40%;
+	margin: 2%;
+	margin-right: 0%;
+	border: 1px solid black;
+	text-align: center;
+	display: inline-block;
+}
+
+#the_image{
+	width: 80%;
+}
+
+#overview{
+	width: 50%;
+	float: right;
+	margin: 2% 4% 2% 0%;
+	padding: 1%;
+}
+
+#dev_name{
+    font-size: 30px;
+    border-bottom: 3px solid olive;
+}
+
+#rat-rev{
+    font-size: 15px;
+    margin-top: 0px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#rat-rev>*{
+    margin: 10px;
+    display: inline;
+}
+ 
+#rating span:nth-child(2){
+    background-color: forestgreen;
+    color: #fff;
+    padding: 5px 3px 0 3px;
+}
+
+#highlights ul{
+    margin-top: -20px;
+}
+
+#highlights ul li{
+    margin: 5px;
+}
+
+#release{
+	margin-top: 20px;
+}
+
+#details{
+    width: 85%;
+}
+ 
+#details table{
+    text-align: left;
+    padding: 5%;
+	vertical-align: baseline;
+	width: 100%;
+} 
+ 
+th{
+	width: 20%;
+    padding-bottom: 10px;
+}
+ 
+#details table th span{
+    font-size: 20px;
+    border-bottom: 2px solid olive;
+}
+ 
+#details table td{
+    padding: 5px;
+	height: 30px;
+}
+ 
+.sub-feat:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.1);
+}

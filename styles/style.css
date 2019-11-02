@@ -1,0 +1,29 @@
+#brand-list{
+    width: 16%;
+    border: 1px solid black;
+    margin: 20px 20px 0 10%;
+    font-family: Tajawal;
+}
+
+#brand-list ul li{
+    list-style: none;
+    text-align: left; 
+    margin: 5px;
+}
+
+#brand-list h4{
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 20px;
+    border-bottom: 1.25px solid olive;
+}
+
+#brand-list ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+#brand-list ul li a:hover{
+    border-bottom: 1px solid olive;
+}

@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<link rel="stylesheet" href="navbar_style.css"/>
-		<link rel="stylesheet" href="details_style.css"/>
+    	<link rel="stylesheet" href="../styles/navbar_style.css"/>
+		<link rel="stylesheet" href="../styles/details_style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Caveat|Changa|Poiret+One|Righteous|Tajawal&display=swap" rel="stylesheet">
 		<meta charset="UTF-8">
     </head>
 
     <body onload="func()">
     
-    	<?php
-            $jsonFile = file_get_contents("phone_details.json");
-            $data = json_decode($jsonFile, true);
-            
-            $phones = array();
-            foreach($data as $key=>$v)
-            	$phones[] = $key;
+		<?php
+			
+			include "initialize.php";
+
             if(isset($_GET["phone_name"]))
             	$phone = $_GET["phone_name"];
             else
-            	$phone = "Redmi Note 7S";
+				$phone = "Redmi Note 7S";
         ?>
 		
 		<div id="navbar">
@@ -29,41 +26,44 @@
 		<div id="rest_of">
 		
 			<div id="images">
-				<img src="" alt="image"/ id="the_image">
+				<img src="" alt="image" id="the_image"/>
 			</div>
 			
-			<div id="dev_name">
-				<span><?php echo $phone; ?></span>
-			</div>
-			</br>
-			<div id="rat-rev">
-				<div id="rating">
-					<span>Rating:</span>
-					<span><?php echo $data[$phone]["Overall"]; ?></span>
+			<div id="overview">
+
+				<div id="dev_name">
+					<span><?php echo $phone; ?></span>
 				</div>
-				<div id="review">
-					<?php echo $data[$phone]["Ratings"]; ?>
+				</br>
+				<div id="rat-rev">
+					<div id="rating">
+						<span>Rating:</span>
+						<span><?php echo $data[$phone]["Overall"]; ?></span>
+					</div>
+					<div id="review">
+						<?php echo $data[$phone]["Ratings"]; ?>
+					</div>
 				</div>
-			</div>
 
-			<div id="highlights">
-				<h4>Highlights</h4>
-				<ul>
-					<?php
-						foreach($data[$phone]["Highlights"] as $feature){
-							echo "<li>".$feature."</li>";
-						}
-					?>
-				</ul>
-			</div>
+				<div id="highlights">
+					<h4>Highlights</h4>
+					<ul>
+						<?php
+							foreach($data[$phone]["Highlights"] as $feature){
+								echo "<li>".$feature."</li>";
+							}
+						?>
+					</ul>
+				</div>
 
-			<div id="price">
-				<span style="font-size: 30px;"> Price: </span></br>
-				<span><?php echo $data[$phone]["MISC"]["Price"]; ?></span>
-			</div>
+				<div id="price">
+					<span style="font-size: 30px;"> Price: <?php echo $data[$phone]["MISC"]["Price"]; ?></span>
+				</div>
 
-			<div id="release">
-				<span> Available From <?php echo $data[$phone]["LAUNCH"]["Announced"] ?> </span>
+				<div id="release">
+					<span> Available From <?php echo $data[$phone]["LAUNCH"]["Announced"] ?> </span>
+				</div>
+
 			</div>
 
 			<div id="details">
@@ -78,15 +78,15 @@
 								echo "<td>".$value."</td></tr>";
 							}
 							if($feature != "NETWORK")
-								echo "<tr style=\"backgroound-color: #fff\"><td></td></tr>";
+								echo "<tr style=\"background-color: #fff\"><td></td></tr>";
 						}
 					?>
 				</table>
 			</div>
-		
-			<div id="contact-section" style="width: 100%;">
 
-			</div>
+		</div>
+
+		<div id="contact-section">
 
 		</div>
 	
@@ -105,9 +105,9 @@
 				ind++;
 				ind %= images.length;
 				console.log(img_src);
-			}	
+			}
 		</script>
 		
-        <script src="load_navbar.js"></script>
+        <script src="../scripts/load_navbar.js"></script>
     </body>
 </html>
