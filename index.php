@@ -37,7 +37,7 @@
 
         </div>
 
-        <div id="coming_soon">
+        <div id="coming_soon" style="color: forestgreen">
             <h1>Coming soon...</h1>
         </div>
 

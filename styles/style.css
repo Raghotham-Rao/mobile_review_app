@@ -2,7 +2,6 @@
     width: 16%;
     border: 1px solid black;
     margin: 20px 20px 0 10%;
-    font-family: Tajawal;
     display: inline-block;
 }
 
@@ -36,7 +35,6 @@ h4{
     width: 55%;
     height: 345px;
     border: 1px solid black;
-    font-family: Tajawal;
     margin: 20px 15% 0 0%;
     float: right;
 }
@@ -50,7 +48,6 @@ h4{
 
 .category{
     width: 100%;
-    font-family: Tajawal;
     border: 1px solid black;
     margin: 5% 0 5% 0;
 }
