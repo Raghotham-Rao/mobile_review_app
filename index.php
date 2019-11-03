@@ -10,7 +10,7 @@
     <body>
 
         <?php
-            include 'pages/initialize.php';
+            include 'pages/db_conn.php';
         ?>
 
         <div id="navbar" style="padding: 10px 0px 10px 0px">
@@ -24,15 +24,73 @@
             <ul>
                 <?php
 
-                    foreach($brands as $brand){
-                        echo '<li><a href="pages/devices.php?brand='.$brand.'">'.$brand.'</a></li>';
+                    $query = "select distinct(brand) from devices";
+                    $result = $conn->query($query);
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()){
+                            echo '<li><a href="pages/devices.php?brand='.$row["brand"].'">'.$row["brand"].'</a></li>';
+                        }
                     }
-
+                    
                 ?>
             </ul>
 
         </div>
-        
+
+        <div id="coming_soon">
+            <h1>Coming soon...</h1>
+        </div>
+
+        <div id="rest_of">
+            
+            <div class="category">
+                
+                <h4>Latest Releases</h4>
+                
+                <ul>
+                    
+                    <?php
+
+                        $query = "select name,img from devices order by release_dt desc limit 5";
+                        $result = $conn->query($query);
+                        if($result->num_rows > 0){
+                            while($row = $result->fetch_assoc()){
+                                $n = explode(" ", $row["name"]);
+                                $n_str = implode("+", $n);
+                                echo '<li><a href="pages/details_page.php?phone_name='.$n_str.'"><div class="dev-card"><img src="'.$row["img"].'"/><h5>'.$row["name"].'</h5></div></a></li>';
+                            }
+                        }
+
+                    ?>
+
+                </ul>
+
+            </div>
+
+            <div class="category">
+                
+                <h4>Top Rated</h4>
+                
+                <ul>
+                    
+                    <?php
+
+                        $query = "select name,img from devices order by ratings desc limit 5";
+                        $result = $conn->query($query);
+                        if($result->num_rows > 0){
+                            while($row = $result->fetch_assoc()){
+                                echo '<li><div class="dev-card"><img src="'.$row["img"].'"/><h5>'.$row["name"].'</h5></div></li>';
+                            }
+                        }
+
+                    ?>
+
+                </ul>
+
+            </div>
+
+        </div>
+
         <div id="contact-section">
 
         </div>
