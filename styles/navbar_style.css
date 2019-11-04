@@ -137,3 +137,8 @@
 g{
     fill: olive;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}

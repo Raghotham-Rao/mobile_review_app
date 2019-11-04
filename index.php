@@ -79,7 +79,7 @@
                         $result = $conn->query($query);
                         if($result->num_rows > 0){
                             while($row = $result->fetch_assoc()){
-                                echo '<li><div class="dev-card"><img src="'.$row["img"].'"/><h5>'.$row["name"].'</h5></div></li>';
+                                echo '<li><a href="pages/details_page.php?phone_name='.$row["name"].'"><div class="dev-card"><img src="'.$row["img"].'"/><h5>'.$row["name"].'</h5></div></a></li>';
                             }
                         }
 
@@ -98,6 +98,10 @@
         <script src="scripts/load_navbar.js"></script>
         <script>
             document.getElementById("search-bar").setAttribute("action", "pages/details_page.php");
+            document.getElementById("comp_menu").setAttribute("href", "pages/compare.php");
+            document.getElementById("brand_menu").setAttribute("href", "pages/brands.php");
+            document.getElementById("the_logo_nav").setAttribute("href", "index.php");
+            document.getElementById("the_logo_contact").setAttribute("href", "index.php");
         </script>
     </body>
 </html>
