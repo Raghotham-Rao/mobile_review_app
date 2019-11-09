@@ -9,6 +9,7 @@
     background-color: black; 
     position: sticky;
     top: 0px;
+    border-radius: 5px;
 }
 
 #navbar ul{
