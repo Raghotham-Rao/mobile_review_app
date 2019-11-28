@@ -37,7 +37,7 @@
 
         </div>
 
-        <div id="coming_soon" style="color: forestgreen">
+        <div id="coming_soon" style="color: orange; font-weight: lighter;background-image: url('https://i.ytimg.com/vi/xJudmRt6PJU/maxresdefault.jpg'); background-size: cover;">
             <h1>Coming soon...</h1>
         </div>
 
@@ -100,6 +100,7 @@
             document.getElementById("search-bar").setAttribute("action", "pages/details_page.php");
             document.getElementById("comp_menu").setAttribute("href", "pages/compare.php");
             document.getElementById("brand_menu").setAttribute("href", "pages/brands.php");
+            document.getElementById("new_rel_menu").setAttribute("href", "pages/new_releases.php");
             document.getElementById("the_logo_nav").setAttribute("href", "index.php");
             document.getElementById("the_logo_contact").setAttribute("href", "index.php");
         </script>

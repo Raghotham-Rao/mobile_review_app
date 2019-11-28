@@ -17,10 +17,10 @@ srch_box.send_keys('mobiles')
 srch_box.send_keys(Keys.ENTER)
 sleep(3)
 
-driver.find_element_by_xpath("//div[contains(text(), 'Popularity')]").click()
+driver.find_element_by_xpath("//div[contains(text(), 'Price -- High to Low')]").click()
 sleep(2)
 
-driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '4 GB')]").click()
+driver.find_element_by_xpath("//div[contains(@class, '_1GEhLw') and contains(text(), '6 GB')]").click()
 sleep(2)
 
 pages = 2

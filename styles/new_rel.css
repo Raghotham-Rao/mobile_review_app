@@ -1,0 +1,41 @@
+#restof{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid darkgray;
+}
+
+.dev-details{
+    width: 80%;
+    margin: 20px auto 20px auto;
+    padding: 10px;
+}
+
+.dev-details:hover{
+    box-shadow: 0px 0px 4px darkgray;
+    cursor: pointer;
+}
+
+.dev-img{
+    width: 25%;
+}
+
+.dev-img img{
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+.dev-det{
+    width: 60%;
+    font-weight: lighter;
+    display: block;
+    float: right;
+    margin-top: -200px;
+    margin-right: 10%;
+}
+
+.dev-det span{
+    font-size: 60%;
+    font-weight: lighter;
+}
