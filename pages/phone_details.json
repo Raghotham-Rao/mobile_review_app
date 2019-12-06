@@ -3003,7 +3003,7 @@
 			"Colors": "White, Black",
 			"Models": "SM-G770F"
 		},
-		"images": ["https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s10e.jpg", null],
+		"images": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRg9LykwqhS7G8ijadrIo60r2BfQL-UoV4pJCPXcSgFGgUq_jL1g&s", null],
 		"Overall": "4.6",
 		"Ratings": "1,416 Ratings & 155 Reviews",
 		"Highlights": ["8 GB RAM | 512 GB ROM | Expandable Upto 512 GB", "15.49 cm (6.1 inch) Quad HD+ Display", "16MP + 12MP | 10MP Front Camera", "3400 mAh Lithium-ion Battery", "Exynos 9 9820 Processor", "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories"]
@@ -3980,7 +3980,7 @@
 			"Audio quality": "Noise -94.0dB / Crosstalk -93.6dB",
 			"Battery life": "Endurance rating 90h"
 		},
-		"images": ["https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-1.jpg", "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-4.jpg", "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-2.jpg", "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-3.jpg"],
+		"images": ["https://c1.neweggimages.com/ProductImage/ABPX_132055997409135155yEJWWRu6sF.jpg", "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-4.jpg", "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-2.jpg", "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-7t-3.jpg"],
 		"Overall": "4.6",
 		"Ratings": "124 Ratings & 8 Reviews",
 		"Highlights": ["8 GB RAM | 256 GB ROM |", "16.28 cm (6.41 inch) Display", "48 MP + 5 MP | 16MP Front Camera", "3700 mAh Battery", "1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase"]
@@ -4366,5 +4366,84 @@
 		"Overall": "4.4",
 		"Ratings": "3,915 Ratings & 490 Reviews",
 		"Highlights": ["6 GB RAM | 128 GB ROM | Expandable Upto 512 GB", "17.02 cm (6.7 inch) Full HD+ Display", "32MP + 5MP + 8MP | 32MP Front Camera", "4500 mAh Lithium-ion Battery", "Qualcomm Snapdragron 675 Processor", "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories"]
+	},
+	"Asus ROG Phone II": {
+		"NETWORK": {
+			"Technology": "GSM / HSPA / LTE",
+			"": ""
+		},
+		"LAUNCH": {
+			"Announced": "2019, July",
+			"Status": "Available. Released 2019, September"
+		},
+		"BODY": {
+			"Dimensions": "171 x 77.6 x 9.5 mm (6.73 x 3.06 x 0.37 in)",
+			"Weight": "240 g (8.47 oz)",
+			"Build": "Front glass (Gorilla Glass 6), back glass, aluminum frame",
+			"SIM": "Dual SIM (Nano-SIM, dual stand-by)"
+		},
+		"DISPLAY": {
+			"Type": "AMOLED capacitive touchscreen, 16M colors",
+			"Size": "6.59 inches, 106.6 cm2 (~80.3% screen-to-body ratio)",
+			"Resolution": "1080 x 2340 pixels, 19.5:9 ratio (~391 ppi density)",
+			"Protection": "Corning Gorilla Glass 6",
+			"DISPLAY_others": "DCI-P3 108%\nHDR10\n120Hz\n240Hz touch-sensing"
+		},
+		"PLATFORM": {
+			"OS": "Android 9.0 (Pie), ROG UI",
+			"Chipset": "Qualcomm SDM855 Snapdragon 855+ (7 nm)",
+			"CPU": "Octa-core (1x2.96 GHz Kryo 485 & 3x2.42 GHz Kryo 485 & 4x1.78 GHz Kryo 485)",
+			"GPU": "Adreno 640 (700 MHz)"
+		},
+		"MEMORY": {
+			"Card slot": "No",
+			"Internal": "128GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM, 1TB 12GB RAM"
+		},
+		"MAIN CAMERA": {
+			"Dual": "48 MP, f/1.8, 26mm (wide), 1/2\", 0.8\u00b5m, PDAF, Laser AF\n13 MP, f/2.4, 11mm (ultrawide)",
+			"Features": "LED flash, HDR, panorama",
+			"Video": "2160p@30/60fps, 1080p@30/60/240fps, 720p@480fps; gyro-EIS (except @240/480fps)"
+		},
+		"SELFIE CAMERA": {
+			"Single": "24MP, f/2.2, 0.9\u00b5m",
+			"Features": "Panorama, HDR",
+			"Video": "1080p@30fps"
+		},
+		"SOUND": {
+			"Loudspeaker": "Yes, with DTS:X stereo speakers (2 dedicated amplifiers)",
+			"3.5mm jack": "Yes",
+			"SOUND_others": "24-bit/192kHz audio\nActive noise cancellation with dedicated mics\nDTS Headphone X"
+		},
+		"COMMS": {
+			"WLAN": "Wi-Fi 802.11 a/b/g/n/ac/ad, dual-band, Wi-Fi Direct, hotspot",
+			"Bluetooth": "5.0, A2DP, LE, aptX HD",
+			"GPS": "Yes, with dual-band A-GPS, GLONASS, BDS, GALILEO, QZSS",
+			"NFC": "Yes",
+			"Radio": "FM radio",
+			"USB": "3.1, Type-C 1.0 reversible connector; accessory connector"
+		},
+		"FEATURES": {
+			"Sensors": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass"
+		},
+		"BATTERY": {
+			"BATTERY_others": "Non-removable Li-Po 6000 mAh battery",
+			"Charging": "Fast battery charging 30W (Quick Charge 4.0)\nPower bank/Reverse charging 10W"
+		},
+		"MISC": {
+			"Colors": "Matte Black, Glossy Black",
+			"Models": "ASUS_I001D, I001DA, I001DE, I001DC",
+			"Price": "$\u2009549.99 / \u00a3\u2009419.02"
+		},
+		"TESTS": {
+			"Performance": "Basemark OS II: 6084 / Basemark OS II 2.0: 5693\nBasemark X: 82298",
+			"Display": "Contrast ratio: Infinite (nominal)",
+			"Camera": "Photo / Video",
+			"Loudspeaker": "Voice 90dB / Noise 81dB / Ring 85dB",
+			"Battery life": "Endurance rating 132h"
+		},
+		"images": ["https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone2-1.jpg", "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone2-2.jpg", "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone2-3.jpg", "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone2-4.jpg", "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone2-5.jpg"],
+		"Overall": "4.7",
+		"Ratings": "4,123 Ratings & 922 Reviews",
+		"Highlights": ["8 GB RAM | 128 GB ROM |", "16.74 cm (6.59 inch) Full HD+ Display", "48MP + 13MP | 24MP Front Camera", "6000 mAh Battery", "Qualcomm Snapdragon 855 Plus Processor", "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories"]
 	}
 }

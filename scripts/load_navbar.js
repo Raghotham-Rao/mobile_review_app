@@ -6,7 +6,7 @@ var navbar_code = '<ul>'+
                 '</a></li>'+
                 '<li><a id="brand_menu" href="brands.php">Brands</a></li>'+
                 '<li><a id="new_rel_menu" href="new_releases.php">New Releases</a></li>'+
-                '<li><a href="#">Reviews</a></li>'+
+                '<li><a id="rev_menu" href="reviews-list.php">Reviews</a></li>'+
                 '<li><a id="comp_menu" href="compare.php">Compare</a></li>'+
                 '<li><a href="#contact-section">Contact</a></li>'+
                 '<li>'+

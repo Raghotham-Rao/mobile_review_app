@@ -3,8 +3,8 @@
     <head>
         <title>Confused?</title>
         <link href="https://fonts.googleapis.com/css?family=Caveat|Changa|PoiretOne|Righteous|Tajawal&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../styles/navbar_style.css">
         <link rel="stylesheet" href="../styles/brand_style.css">
+        <link rel="stylesheet" href="../styles/navbar_style.css">
     </head>
 
     <body>
@@ -26,7 +26,7 @@
                 $brands = array();
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
-                        echo '<a href="show_devices.php?brand='.$row["brand"].'">'.$row["brand"].'</a>';
+                        echo '<a href="viewall.php?brand='.$row["brand"].'">'.$row["brand"].'</a>';
                         $brands[] = $row["brand"];
                     }
                 }
@@ -45,7 +45,7 @@
                         echo '<li><a href="details_page.php?phone_name='.$row["name"].'"><div class="dev-card"><img src="'.$row["img"].'"/><h5>'.$row["name"].'</h5></div></a></li>';
                     }
                 }
-                echo '<a class="view-all-btn" href="show_devices.php?brand='.$brand.'">View All >>></a>';
+                echo '<a class="view-all-btn" href="viewall.php?brand='.$brand.'">View All >>></a>';
                 echo '</ul></div>';
             }
         ?>

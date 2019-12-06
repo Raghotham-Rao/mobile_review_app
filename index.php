@@ -28,7 +28,7 @@
                     $result = $conn->query($query);
                     if($result->num_rows > 0){
                         while($row = $result->fetch_assoc()){
-                            echo '<li><a href="pages/devices.php?brand='.$row["brand"].'">'.$row["brand"].'</a></li>';
+                            echo '<li><a href="pages/viewall.php?brand='.$row["brand"].'">'.$row["brand"].'</a></li>';
                         }
                     }
                     
@@ -102,6 +102,7 @@
             document.getElementById("brand_menu").setAttribute("href", "pages/brands.php");
             document.getElementById("new_rel_menu").setAttribute("href", "pages/new_releases.php");
             document.getElementById("the_logo_nav").setAttribute("href", "index.php");
+            document.getElementById("rev_menu").setAttribute("href", "pages/reviews-list.php");
             document.getElementById("the_logo_contact").setAttribute("href", "index.php");
         </script>
     </body>

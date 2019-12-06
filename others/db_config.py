@@ -2,7 +2,7 @@ from mysql import connector
 import json
 
 dstring = ""
-with open("../pages/phone_details.json") as f:
+with open("pages/phone_details.json") as f:
     for i in f:
         dstring += i
 
