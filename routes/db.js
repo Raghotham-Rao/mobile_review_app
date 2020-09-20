@@ -36,4 +36,19 @@ router.get("/brands", (req, res) => {
 	});
 });
 
+router.get('/devices', (req, res) => {
+	phoneDetails.find({}, {"_id": 0, "name": 1}, (err, data) => {
+		if(err){
+			console.log("Error retrieving data");
+		}
+		else{
+			var devices = [];
+			for(doc of data){
+				devices.push(doc.name);
+			}
+			res.send(devices);
+		}
+	})
+});
+
 module.exports = router;

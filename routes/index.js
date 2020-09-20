@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 
 	needle('get','localhost:8777/db/brands', {json: true})
 		.then(resp => {
-			res.render('index', { title: 'Express', 'brands': resp.body });
+			res.render('index', { title: 'Mobile Review App', 'brands': resp.body });
 		})
 		.catch(err => {
 			console.log("An error occurred!");
