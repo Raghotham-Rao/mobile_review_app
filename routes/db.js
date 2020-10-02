@@ -51,4 +51,10 @@ router.get('/devices', (req, res) => {
 	})
 });
 
+router.post('/top-rated', (req, res) => {
+	phoneDetails.find({'stars': {$ne: 'N/A'}}).sort({'stars': -1}).limit(5).then((docs) => {
+		res.send(docs);
+	});
+});
+
 module.exports = router;
