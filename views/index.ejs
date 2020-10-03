@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <% include partials/bootstrap_include.ejs %>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="/scripts/index_script.js"></script>
   </head>
   <body>
   	
@@ -15,15 +14,11 @@
       <%include partials/navbar.ejs%>
 
       <div class="row">
+        
         <div class="col-sm-3">
-          <div class="list-group mt-2">
-            <li class="list-group-item bg-secondary text-light">Brands</li>
-            <% for(brand of brands.splice(0, 7)) {%>
-                <a class="list-group-item list-group-item-action cursor-pointer"><%= brand %></a>
-            <% } %>
-            <a class="list-group-item list-group-item-action cursor-pointer bg-secondary text-light">All Brands >>></a>
-          </div>
+          <% include partials/brands_aside.ejs %>
         </div>
+
         <div class="col-sm-9">
 
           <div class="row my-2">
@@ -69,5 +64,7 @@
   		
   	</div>
   
+  <script src="scripts/load_commons.js"></script>
+  <script src="scripts/index_script.js"></script>
   </body>
 </html>

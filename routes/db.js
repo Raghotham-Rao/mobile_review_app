@@ -57,4 +57,20 @@ router.post('/top-rated', (req, res) => {
 	});
 });
 
+router.get('/devices/:name', (req, res) => {
+	res.render("device_details", {"device_name": req.params.name});
+});
+
+router.post('/device_specs/:name', (req, res) => {
+	phoneDetails.find({'name': ('' + req.params.name).replace('_', ' ')}).limit(1).then((doc) => {
+		if(doc.length == 0){
+			res.status(404).send("Could'nt find device");
+		}
+		res.send(JSON.stringify(doc));
+	})
+	.catch((err) => {
+		res.status(400).send("An error occurred while finding!");
+	});
+});
+
 module.exports = router;

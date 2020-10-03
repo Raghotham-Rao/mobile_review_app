@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<% include partials/bootstrap_include.ejs %>
+	<title> <%= device_name %> </title>
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+	<div class="container">
+
+		<% include partials/navbar.ejs %>
+
+		<div class="row">
+			
+			<div class="col-sm-3">
+	          <% include partials/brands_aside.ejs %>
+	        </div>
+
+			<div class="col-sm-9">
+				<div class="row mt-2 mb-0">
+		            <div class="col-sm my-0">
+		              <div class="jumbotron bg-dark my-0">
+		                <h1 class="display-1 text-warning" id="device_name"> <%= device_name %> </h1>
+		              </div>
+		            </div>
+	          	</div>
+
+	          	<div class="row mt-0">
+	          		<div class="col-sm my-0">
+	          			<ul class="pagination my-0 py-0 float-right">
+			          		<li class="page-item page-link bg-dark text-light">Specifications</li>
+			          		<li class="page-item page-link text-secondary">Gallery</li>
+			          		<li class="page-item page-link text-secondary">Reviews</li>
+			          		<li class="page-item page-link text-secondary">Write a Review</li>
+			          		<li class="page-item page-link text-secondary">Our Opinions</li>
+	          			</ul>
+	          		</div>
+	          	</div>
+
+	          	<div class="row" id="inner_container">
+	          		
+	          	</div>
+	          	<div class="bg-dark text-warning">
+	          	
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="/scripts/load_commons.js"></script>
+	<script src="/scripts/device_details_script.js"></script>
+</body>
+</html>

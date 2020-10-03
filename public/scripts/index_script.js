@@ -7,7 +7,7 @@ $(document).ready(function () {
             for(phone of response){
                 var container_link = document.createElement('a');
                 container_link.setAttribute('class', 'phone-card');
-                container_link.setAttribute('href', '#');
+                container_link.setAttribute('href', '/db/devices/' + phone.name.replace(' ', '_'));
 
                 var phone_card = document.createElement("div");
                 phone_card.setAttribute('class', 'card');
@@ -39,7 +39,7 @@ $(document).ready(function () {
                 container_link.appendChild(phone_card);
                 parent.appendChild(container_link);
             }
-            console.log(response);
+            // console.log(response);
         }
     }); 
 });
