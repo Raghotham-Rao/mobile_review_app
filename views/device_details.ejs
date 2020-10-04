@@ -20,12 +20,20 @@
 	        </div>
 
 			<div class="col-sm-9">
-				<div class="row mt-2 mb-0">
-		            <div class="col-sm my-0">
+				<div class="row mt-2 mb-0 bg-dark mr-0">
+		            <div class="col-sm-7 my-0">
 		              <div class="jumbotron bg-dark my-0">
 		                <h1 class="display-1 text-warning" id="device_name"> <%= device_name %> </h1>
 		              </div>
-		            </div>
+					</div>
+
+					<div class="col-sm-5">
+						<ul class="mt-5" id="highlights_list">
+							<% for(feature of highlights.splice(0, highlights.length - 1)){ %>
+								<li class="text-warning my-1"><%= feature %></li>
+							<% } %>
+						</ul>
+					</div>
 	          	</div>
 
 	          	<div class="row mt-0">
@@ -40,10 +48,9 @@
 	          		</div>
 	          	</div>
 
-	          	<div class="row" id="inner_container">
+	          	<div class="row p-3" id="inner_container">
 	          		
 	          	</div>
-	          	<div class="bg-dark text-warning">
 	          	
 			</div>
 

@@ -58,11 +58,13 @@ router.post('/top-rated', (req, res) => {
 });
 
 router.get('/devices/:name', (req, res) => {
-	res.render("device_details", {"device_name": req.params.name});
+	phoneDetails.find({'name': ('' + req.params.name).replace('_', ' ')}, {'_id': 0, 'highlights': 1, 'stars': 1}, (err, doc) => {
+		res.render("device_details", {"device_name": req.params.name, "highlights": doc[0]['highlights'], "stars": doc[0]['stars']});
+	})
 });
 
 router.post('/device_specs/:name', (req, res) => {
-	phoneDetails.find({'name': ('' + req.params.name).replace('_', ' ')}).limit(1).then((doc) => {
+	phoneDetails.find({'name': ('' + req.params.name).replace('_', ' ')}, {'_id': 0}).limit(1).then((doc) => {
 		if(doc.length == 0){
 			res.status(404).send("Could'nt find device");
 		}

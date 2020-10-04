@@ -7,7 +7,7 @@ $(document).ready(function () {
             for(phone of response){
                 var container_link = document.createElement('a');
                 container_link.setAttribute('class', 'phone-card');
-                container_link.setAttribute('href', '/db/devices/' + phone.name.replace(' ', '_'));
+                container_link.setAttribute('href', '/db/devices/' + phone.name.replaceAll(' ', '_'));
 
                 var phone_card = document.createElement("div");
                 phone_card.setAttribute('class', 'card');
@@ -17,6 +17,7 @@ $(document).ready(function () {
 
                 var phone_image = document.createElement('img');
                 phone_image.setAttribute('class', 'img-thumbnail m-0');
+                phone_image.setAttribute('src', phone["thumbnail_img"]);
                 phone_image.setAttribute('alt', 'Ajay not done yet!');
 
                 card_body.appendChild(phone_image);

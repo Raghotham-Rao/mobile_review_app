@@ -32,3 +32,12 @@ a:hover{
 .page-item:hover{
   cursor: pointer;
 }
+
+#highlights_list li{
+  list-style: square;
+}
+
+th.display-4{
+  font-size: 2em;
+  width: fit-content;
+}
