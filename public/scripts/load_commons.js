@@ -1,3 +1,10 @@
+var preprocess = (str, pattern, replace_str) => {
+    while(str.includes(pattern)){
+        str = str.replace(pattern, replace_str);
+    }
+    return str;
+};
+
 $(document).ready(() => {
 	$.ajax({
         type: "get",
@@ -17,4 +24,10 @@ $(document).ready(() => {
             // console.log(response);
         }
     });
+});
+
+$("#search_device_form").submit((event)  => {
+    event.preventDefault();
+    var device_name = preprocess($("#search_box").val(), ' ', '_');
+    window.location = `http://localhost:8777/db/devices/${device_name}`;
 });

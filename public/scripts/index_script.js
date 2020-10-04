@@ -1,3 +1,10 @@
+var preprocess = (str, pattern, replace_str) => {
+    while(str.includes(pattern)){
+        str = str.replace(pattern, replace_str);
+    }
+    return str;
+};
+
 $(document).ready(function () {
     $.ajax({
         type: "post",
@@ -7,7 +14,11 @@ $(document).ready(function () {
             for(phone of response){
                 var container_link = document.createElement('a');
                 container_link.setAttribute('class', 'phone-card');
-                container_link.setAttribute('href', '/db/devices/' + phone.name.replaceAll(' ', '_'));
+                try{
+                    container_link.setAttribute('href', '/db/devices/' + phone.name.replaceAll(' ', '_'));
+                }catch(err){
+                    container_link.setAttribute('href', '/db/devices/' + preprocess(phone.name));
+                }
 
                 var phone_card = document.createElement("div");
                 phone_card.setAttribute('class', 'card');
